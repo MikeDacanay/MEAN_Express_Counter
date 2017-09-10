@@ -26,3 +26,8 @@ app.post('/add2', function (request, res){
     request.session.name+=1;
     res.redirect('/');
 });
+
+app.post('/reset', function (request, res){
+    delete request.session.name;
+    res.redirect('/');
+});
